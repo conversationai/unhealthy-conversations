@@ -23,7 +23,7 @@ We provide notebooks to replicate our baseline classification results on this da
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/conversationai/unhealthy-conversations/blob/master/notebooks/UnhealthyConversations.ipynb)
 
 
-![Figure here](https://github.com/conversationai/unhealthy-conversations/blob/IlanPrice-readmeupdate/auc.pdf)
+![Figure here](https://github.com/conversationai/unhealthy-conversations/blob/master/auc.pdf)
 
 To give context to the model performance, we compare the performance with human workers. For each comment, we randomly hold out one annotator to act as our 'human model' and use the aggregated score of the other annotators as the ground truth to compute the ROC AUC (repeated 5 times then averaged). We use the same test sets to compute the ROC AUC of the trained BERT model and average those scores as well. As we can see, for all attributes other than 'sarcastic' the BERT model outperforms a randomly selected human annotator, indicating that it has sufficiently captured the semantic and syntactic structures for these attributes. For 'sarcastic', the gap between the BERT model and human annotators indicates a rich area for studying whether model performance can be improved.
 
