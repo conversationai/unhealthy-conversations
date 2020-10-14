@@ -7,6 +7,10 @@ Each comment is labelled as either 'healthy' or 'unhealthy', in addition to bina
 
 For a detailed description of the annotation process, quality control procedures, summary statistics and baseline modelling results, see our [paper](to_add), to appear in the [Fourth Workshop on Online Abuse and Harms 2020](https://www.workshopononlineabuse.com/).
 
+The UCC contributes further high quality data on  attributes  like  sarcasm,  hostility,  and  condescension, adding to existing datasets on these and related attributes, and provides (to the best of our knowledge)the first dataset of this scale with labels for dismissiveness,  unfair generalisations,  antagonistic behavior, and overall assessments of whether those comments fall within 'healthy' conversation.
+
+We hope that this dataset  can contribute to research on how to understand, monitor and deal with unhealthy online interactions in order to promote healthier public conversations.
+
 ## The data
 
 The dataset is provided as three .csv files, `train.csv`, `test.csv`, and `val.csv`. In addition to labels and confidence scores for each of the above-mentioned attributes, each comment includes the number of trusted judgements which were aggregated to yield the results labels and confidence scores (see paper for details). 
@@ -14,3 +18,20 @@ The dataset is provided as three .csv files, `train.csv`, `test.csv`, and `val.c
 We also provide the individual annotations of each comment in `unhealthy_full.csv`. This contains all individual judgements which were aggregatted to create the final dataset. Each of these annotations includes the trustworthiness score of the annotator, allowing users to impose higher trustworthiness thresholds or apply different aggregation methods if they so wish.
 
 ## Baseline classification
+We provide notebooks to replicate our baseline classification results on this dataset in `UnhealthyConversations.ipynb`. Fine-tuning pre-trained BERT produces clas-sifiers with modest performance compared to the state of the art for sequence classi-fication.  The best performing attributes, 'hostile' and 'antagonistic' are also those most similar to thetypes of attributes typically annotated in commentclassification work.  The other attributes seem tocluster together, with the ‘sarcastic’ label particu-larly noteworthy for its low performance.
+
+![Figure here]()
+
+To give context to the model performance, we compare the performance with human workers. For each comment, we randomly hold out one annotator to act as our 'human model' and use the aggregated score of the other annotators as the ground truth to compute the ROC AUC (repeated 5 times then averaged). We use the same test sets to compute the ROC AUC of the trained BERT model and average those scores as well. As we can see, for all attributes other than 'sarcastic' the BERT model outperforms a randomly selected human annotator, indicating that it has sufficiently captured the semantic and syntactic structures for these attributes. For 'sarcastic', the gap between the BERT model and human annotators indicates an rich area for studying whether model performance can be improved.
+
+| Attribute}  | Human AUC | BERT AUC |
+|------------ |-----------|----------|
+|Antagonistic |0.71       |  0.82    | 
+|Condescending| 0.72      |    0.78  |
+|Dismissive   | 0.68      | 0.82     |
+|Generalisation | 0.73    | 0.74     |
+|Hostile       |0.76      |0.84      |
+|Sarcastic     |0.72      |0.64      |
+|Unhealthy     | 0.62     | 0.69   |
+ 
+Code for  this analysis is in `AUC_analysis.ipynb`.
