@@ -18,7 +18,10 @@ The dataset is provided as three .csv files, `train.csv`, `test.csv`, and `val.c
 We also provide the individual annotations of each comment in `unhealthy_full.csv`. This contains all individual judgements which were aggregatted to create the final dataset. Each of these annotations includes the trustworthiness score of the annotator, allowing users to impose higher trustworthiness thresholds or apply different aggregation methods if they so wish.
 
 ## Baseline classification
+
 We provide notebooks to replicate our baseline classification results on this dataset in `UnhealthyConversations.ipynb`. Fine-tuning pre-trained BERT produces classifiers with modest performance compared to the state of the art for sequence classification.  The best performing attributes, 'hostile' and 'antagonistic' are also those most similar to thetypes of attributes typically annotated in commentclassification work.  The other attributes seem tocluster together, with the ‘sarcastic’ label particu-larly noteworthy for its low performance.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/conversationai/unhealthy-conversations/blob/master/notebooks/UnhealthyConversations.ipynb)
+
 
 ![Figure here](https://github.com/conversationai/unhealthy-conversations/blob/IlanPrice-readmeupdate/auc.pdf)
 
