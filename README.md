@@ -20,7 +20,7 @@ We also provide the individual annotations of each comment in `unhealthy_full.cs
 ## Baseline classification
 We provide notebooks to replicate our baseline classification results on this dataset in `UnhealthyConversations.ipynb`. Fine-tuning pre-trained BERT produces clas-sifiers with modest performance compared to the state of the art for sequence classi-fication.  The best performing attributes, 'hostile' and 'antagonistic' are also those most similar to thetypes of attributes typically annotated in commentclassification work.  The other attributes seem tocluster together, with the ‘sarcastic’ label particu-larly noteworthy for its low performance.
 
-![Figure here]()
+![Figure here](https://github.com/conversationai/unhealthy-conversations/blob/IlanPrice-readmeupdate/auc.pdf)
 
 To give context to the model performance, we compare the performance with human workers. For each comment, we randomly hold out one annotator to act as our 'human model' and use the aggregated score of the other annotators as the ground truth to compute the ROC AUC (repeated 5 times then averaged). We use the same test sets to compute the ROC AUC of the trained BERT model and average those scores as well. As we can see, for all attributes other than 'sarcastic' the BERT model outperforms a randomly selected human annotator, indicating that it has sufficiently captured the semantic and syntactic structures for these attributes. For 'sarcastic', the gap between the BERT model and human annotators indicates an rich area for studying whether model performance can be improved.
 
