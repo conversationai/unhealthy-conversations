@@ -17,6 +17,8 @@ The dataset is provided as three .csv files, `train.csv`, `test.csv`, and `val.c
 
 We also provide the individual annotations of each comment in `unhealthy_full.csv`. This contains all individual judgements which were aggregated to create the final dataset. Each of these annotations includes the trustworthiness score of the annotator, allowing users to impose higher trustworthiness thresholds or apply different aggregation methods as desired.
 
+The raw comments were taken from the [comments](https://github.com/sfu-discourse-lab/SOCC#comments) corpus within the [SFU Opinion and Comments Corpus](https://github.com/sfu-discourse-lab/SOCC). 
+
 ## Baseline classification
 
 We provide notebooks to replicate our baseline classification results on this dataset in `UnhealthyConversations.ipynb`. Fine-tuning pre-trained BERT produces classifiers with modest performance compared to the state of the art for sequence classification. The best performing attributes, 'hostile' and 'antagonistic' are also those most similar to the types of attributes typically annotated in comment classification work. The other attributes seem to cluster together, with the ‘sarcastic’ label particularly noteworthy for its low performance.
