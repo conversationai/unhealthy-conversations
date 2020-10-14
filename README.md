@@ -7,7 +7,7 @@ Each comment is labelled as either 'healthy' or 'unhealthy', in addition to bina
 
 For a detailed description of the annotation process, quality control procedures, summary statistics and baseline modelling results, see our [paper](to_add), to appear in the [Fourth Workshop on Online Abuse and Harms 2020](https://www.workshopononlineabuse.com/).
 
-The UCC contributes further high quality data on  attributes  like  sarcasm,  hostility,  and  condescension, adding to existing datasets on these and related attributes, and provides (to the best of our knowledge)the first dataset of this scale with labels for dismissiveness,  unfair generalisations,  antagonistic behavior, and overall assessments of whether those comments fall within 'healthy' conversation.
+The UCC contributes further high quality data on  attributes  like  sarcasm,  hostility,  and  condescension, adding to existing datasets on these and related attributes, and provides (to the best of our knowledge) the first dataset of this scale with labels for dismissiveness,  unfair generalisations,  antagonistic behavior, and overall assessments of whether those comments fall within 'healthy' conversation.
 
 We hope that this dataset  can contribute to research on how to understand, monitor and deal with unhealthy online interactions in order to promote healthier public conversations.
 
@@ -18,7 +18,7 @@ The dataset is provided as three .csv files, `train.csv`, `test.csv`, and `val.c
 We also provide the individual annotations of each comment in `unhealthy_full.csv`. This contains all individual judgements which were aggregatted to create the final dataset. Each of these annotations includes the trustworthiness score of the annotator, allowing users to impose higher trustworthiness thresholds or apply different aggregation methods if they so wish.
 
 ## Baseline classification
-We provide notebooks to replicate our baseline classification results on this dataset in `UnhealthyConversations.ipynb`. Fine-tuning pre-trained BERT produces clas-sifiers with modest performance compared to the state of the art for sequence classi-fication.  The best performing attributes, 'hostile' and 'antagonistic' are also those most similar to thetypes of attributes typically annotated in commentclassification work.  The other attributes seem tocluster together, with the ‘sarcastic’ label particu-larly noteworthy for its low performance.
+We provide notebooks to replicate our baseline classification results on this dataset in `UnhealthyConversations.ipynb`. Fine-tuning pre-trained BERT produces classifiers with modest performance compared to the state of the art for sequence classification.  The best performing attributes, 'hostile' and 'antagonistic' are also those most similar to thetypes of attributes typically annotated in commentclassification work.  The other attributes seem tocluster together, with the ‘sarcastic’ label particu-larly noteworthy for its low performance.
 
 ![Figure here](https://github.com/conversationai/unhealthy-conversations/blob/IlanPrice-readmeupdate/auc.pdf)
 
