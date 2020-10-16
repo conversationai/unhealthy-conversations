@@ -5,7 +5,7 @@ The Unhealthy Comments Corpus (UCC) is corpus of 44355 comments intended to assi
 
 Each comment is labelled as either 'healthy' or 'unhealthy', in addition to binary labels for the presence of six potentially 'unhealthy' sub-attributes: (1) hostile; (2) antagonistic, insulting, provocative or trolling; (3) dismissive; (4) condescending or patronising; (5) sarcastic; and/or (6) an unfair generalisation. Each label also has an associated confidence score.
 
-For a detailed description of the annotation process, quality control procedures, summary statistics and baseline modelling results, see our [paper](to_add), to appear in the [Fourth Workshop on Online Abuse and Harms 2020](https://www.workshopononlineabuse.com/).
+For a detailed description of the annotation process, quality control procedures, summary statistics and baseline modelling results, see our [paper](https://arxiv.org/abs/2010.07410), to appear in the [Fourth Workshop on Online Abuse and Harms 2020](https://www.workshopononlineabuse.com/).
 
 The UCC contributes further high quality data on  attributes  like  sarcasm,  hostility,  and  condescension, adding to existing datasets on these and related attributes, and provides (to the best of our knowledge) the first dataset of this scale with labels for dismissiveness,  unfair generalisations,  antagonistic behavior, and overall assessments of whether those comments fall within 'healthy' conversation.
 
